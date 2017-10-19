@@ -21,11 +21,7 @@ function sleep_in(weekday, vacation)
 
 function monkey_trouble(a_smile, b_smile)
 {
-    if((a_smile && b_smile)||(!a_smile && !b_smile))
-    {
-        return true;
-    }
-    return false;
+    return((a_smile && b_smile)||(!a_smile && !b_smile));
 }
 
 function string_times(string, n)
