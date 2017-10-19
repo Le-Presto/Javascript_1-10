@@ -4,40 +4,28 @@
 
 function sleep_in(weekday, vacation)
 {
-    if(weekday == false)
+    if(!weekday && !vacation)
     {
-        if(vacation == false)
-        {
-            return true;
-        }
-        else
-        {
-            return true;
-        }
+        return true;
     }
-    if(weekday == true)
+    if(vacation)
     {
-        if(vacation == true)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        return true;
     }
+    if(weekday && vacation)
+    {
+        return true;
+    }
+    return false;
 }
 
 function monkey_trouble(a_smile, b_smile)
 {
-    if(((a_smile == true) && (b_smile == true))||((a_smile == false) && (b_smile == false)))
+    if((a_smile && b_smile)||(!a_smile && !b_smile))
     {
         return true;
     }
-    else if((a_smile == true && b_smile == false)||(a_smile == false && b_smile == true))
-    {
-        return false;
-    }
+    return false;
 }
 
 function string_times(string, n)
